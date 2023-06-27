@@ -11,11 +11,17 @@ class Library:
             data = f.read()
             self.database = json.loads(data)
             print(self.database)
+            f.close()
         except:
             print("File not found")
     def writeFile(self):
         f = open("data.txt","w")
         f.write(json.dumps(self.database))
+        f.close()
+    def writeData(self,a,b):
+        f = open("transaction.txt","a")
+        f.write(f"{b} items of {a} purchased")
+        f.close()
     def showList(self):
         CLR()
         try:
@@ -70,6 +76,7 @@ class Library:
                     else:
                         self.database[query][0] = self.database[query][0]-op
                     self.writeFile()
+                    self.writeData(query,op)
                 else:
                     pass
             else:
