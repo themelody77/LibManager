@@ -10,7 +10,7 @@ class Library:
             f = open("data.txt","r")
             data = f.read()
             self.database = json.loads(data)
-            print(self.database)
+            # print(self.database)
             f.close()
         except:
             print("File not found")
