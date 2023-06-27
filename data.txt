@@ -1,0 +1,1 @@
+{"wings of fire": [50, 200], "carnatic music": [50, 999], "cbse": [25, 1250]}
